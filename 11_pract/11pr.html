@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Data Example</title>
+    <style>
+        form {
+            width: 300px;
+            margin: 20px auto;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        input, textarea, button {
+            padding: 8px;
+            font-size: 14px;
+        }
+        .error {
+            color: red;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+<form id="dataForm">
+    <label>
+        Имя:
+        <input type="text" id="name" name="name" required>
+        <span class="error" id="nameError"></span>
+    </label>
+    <label>
+        E-mail:
+        <input type="email" id="email" name="email" required>
+        <span class="error" id="emailError"></span>
+    </label>
+    <label>
+        Телефон:
+        <input type="text" id="phone" name="phone">
+        <span class="error" id="phoneError"></span>
+    </label>
+    <label>
+        Дата:
+        <input type="date" id="date" name="date">
+    </label>
+    <label>
+        Комментарий:
+        <textarea id="comment" name="comment" required></textarea>
+        <span class="error" id="commentError"></span>
+    </label>
+    <button type="button" onclick="submitForm()">Отправить</button>
+</form>
+<script src="script.js"></script>
+</body>
+</html>

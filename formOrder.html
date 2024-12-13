@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма заявки</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="form-container">
+    <h2>Разработка веб-приложения</h2>
+    <p>Заполните форму и мы обязательно свяжемся с вами в ближайшее время для уточнения деталей</p>
+    <form id="contactForm">
+        <label for="name">Как вас зовут</label>
+        <input type="text" id="name" name="name" placeholder="Филимонов Владимир Николаевич" required>
+
+        <label for="email">Ваш e-mail</label>
+        <input type="email" id="email" name="email" placeholder="limon4eg@mail.ru" required>
+
+        <label for="phone">Телефон</label>
+        <input type="tel" id="phone" name="phone" placeholder="+7 123 456 23 23" required>
+
+        <label for="country">Страна</label>
+        <select id="country" name="country" required>
+            <option value="Россия">Россия</option>
+            <option value="Беларусь">Беларусь</option>
+            <option value="Казахстан">Казахстан</option>
+        </select>
+
+        <label for="date">Дата</label>
+        <input type="date" id="date" name="date" required>
+
+        <label for="comments">Комментарий</label>
+        <textarea id="comments" name="comments" rows="4" placeholder="Ваши комментарии"></textarea>
+
+        <div class="checkbox-container">
+            <input type="checkbox" id="consent" name="consent" required>
+            <label for="consent">Согласен на обработку моих персональных данных</label>
+        </div>
+
+        <button type="submit">Отправить заявку</button>
+    </form>
+</div>
+
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <p id="successMessage">Спасибо за заявку! Мы свяжемся с вами в ближайшее время.</p>
+    </div>
+</div>
+
+<script>
+    const modal = document.getElementById("modal");
+    const form = document.getElementById("contactForm");
+    const span = document.getElementsByClassName("close")[0];
+
+    form.onsubmit = function(event) {
+        event.preventDefault();
+        modal.style.display = "block";
+    }
+
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    window.onclick = function(event) {
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
+
+</body>
+</html>

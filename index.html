@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Фуллстек разработка 1 практика</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+    <div class="logo">
+        <img src="1691772756_grizly-club-p-kartinki-gerb-rtu-mirea-bez-fona-45.jpg" alt="Логотип ИПТИП (атом)">
+    </div>
+    <nav>
+        <a href="index.html">Главная</a>
+        <a href="pract_3.html">Первый семестр</a>
+        <a href="">Второй семестр</a>
+        <a href="devWebPage.html">Услуги</a>
+        <a href="#">Авторизация</a>
+    </nav>
+    <div>
+        <strong>Группа:</strong> ЭФБО-03-24 <br>
+        Филимонов Владимир Николаевич
+    </div>
+</header>
+
+<main>
+    <aside>
+        <nav>
+            <a href="#front">Фронтенд</a><br>
+            <a href="#back">Бэкенд</a>
+        </nav>
+    </aside>
+    <button id="scrollToTop" onclick="scrollToTop()">Вверх</button>
+
+    <script>
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        window.onscroll = function() {
+            var btn = document.getElementById('scrollToTop');
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                btn.style.display = "block";
+            } else {
+                btn.style.display = "none";
+            }
+        };
+    </script>
+
+    <style>
+        #scrollToTop {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            background-color: #000;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            display: none;
+            z-index: 1000;
+        }
+
+        #scrollToTop:hover {
+            background-color: #444;
+        }
+    </style>
+
+    <section>
+        <h1 id="h1-head">Добро пожаловать на мой сайт</h1>
+        <div class="about-me">
+            <p>Меня зовут Филимонов Владимир Николаевич и&nbsp;я&nbsp;начинающий специалист по&nbsp;веб-разработке.</p>
+            <img src="unnamed.jpg" alt="мое фото">
+        </div>
+
+        <div class="front-dev">
+            <a id="front"><h2>Фронтенд</h2></a>
+            <p>Фронтенд (или клиентская часть)&nbsp;&mdash; это то, что видит пользователь. Он&nbsp;включает в&nbsp;себя все визуальные элементы <nobr>веб-сайта</nobr> или приложения: кнопки, формы, изображения и&nbsp;текст. Фронтенд разработчики используют языки разметки и&nbsp;стилизаций, такие как <acronym title="HyperText Markup Language" lang="en">HTML</acronym>, <acronym title="Cascading Style Sheets" lang="en">CSS</acronym> и&nbsp;JavaScript, чтобы создавать интерактивные и&nbsp;привлекательные интерфейсы. Основная задача фронтенда&nbsp;&mdash; обеспечить удобство использования и&nbsp;эстетическую привлекательность.</p>
+        </div>
+
+        <video width="600" controls>
+            <source src="video1.mp4" type="video/mp4">
+            Ваш браузер не поддерживает видео.
+        </video>
+
+        <div class="back-dev">
+            <a id="back"><h2>Бэкенд</h2></a>
+            <p>Бэкенд (или серверная часть)&nbsp;&mdash; это &laquo;за&nbsp;кулисами&raquo; <nobr>веб-приложения</nobr>. Он&nbsp;отвечает за&nbsp;обработку данных, управление пользователями и&nbsp;взаимодействие с&nbsp;базами данных. Бэкенд разработчики используют языки программирования, такие как Python, Ruby, Java или <acronym title="Hypertext Preprocessor" lang="en">PHP</acronym>, а&nbsp;также фреймворки и&nbsp;базы данных для создания логики приложения. Основная задача бэкенда&nbsp;&mdash; обеспечить стабильную работу приложения и&nbsp;безопасность данных.</p>
+        </div>
+
+        <video width="600" controls id="video2">
+            <source src="video1.mp4" type="video/mp4">
+            Ваш браузер не поддерживает видео.
+        </video>
+    </section>
+</main>
+
+<footer>
+    © Филимонов Владимир Николаевич, 2024
+</footer>
+
+</body>
+</html>

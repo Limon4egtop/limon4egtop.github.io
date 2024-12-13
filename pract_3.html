@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3 практика - Филимонов</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <img src="1691772756_grizly-club-p-kartinki-gerb-rtu-mirea-bez-fona-45.jpg" alt="Логотип ИПТИП (атом)">
+    </div>
+    <nav>
+        <a href="index.html">Главная</a>
+        <a href="pract_3.html">Первый семестр</a>
+        <a href="">Второй семестр</a>
+        <a href="devWebPage.html">Услуги</a>
+        <a href="#">Авторизация</a>
+    </nav>
+    <div>
+        <strong>Группа:</strong> ЭФБО-03-24 <br>
+        Филимонов Владимир Николаевич
+    </div>
+</header>
+
+<main>
+    <aside>
+        <nav>
+            <a href="#lek">Лекции</a>
+            <a href="#prac">Практики</a>
+        </nav>
+    </aside>
+
+    <section>
+        <h1>Добро пожаловать на мой сайт</h1>
+        <div class="content">
+            <p>Пример контента</p>
+        </div>
+        <button onclick="toggleVisibility('.content')">Переключить видимость</button>
+        <h2 id="lek">Лекции первого семестра</h2>
+        <table>
+            <thead>
+            <tr>
+                <th>№</th>
+                <th>Тема</th>
+                <th>Отметка о посещении</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>1</td>
+                <td>Основы языка HTML</td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Изучение CSS</td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Адаптивные макеты</td>
+                <td><input type="checkbox"></td>
+            </tr>
+            </tbody>
+        </table>
+
+        <a id="prac"><h2>Практические занятия</h2></a>
+        <table>
+            <thead>
+            <tr>
+                <th>№</th>
+                <th>Тема</th>
+                <th>Отметка о посещении</th>
+                <th>Отметка о выполнении</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>1</td>
+                <td>Создание форм в HTML</td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Работа с CSS</td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+            </tr>
+            </tbody>
+        </table>
+
+        <h2>Встроенный PDF-документ</h2>
+        <object data="test_file.pdf" type="application/pdf" width="50%" height="400px">
+
+        </object>
+
+        <h2>Местоположение</h2>
+        <iframe src="https://yandex.ru/map-widget/v1/-/CCU2pGj2" width="100%" height="400px"></iframe>
+    </section>
+</main>
+
+<footer>
+    © Филимонов Владимир Николаевич, 2024
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

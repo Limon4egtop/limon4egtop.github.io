@@ -1,0 +1,70 @@
+let name = prompt("Введите имя");
+let age = prompt("Введите возраст");
+alert(`Привет ${name}. Твой возраст ${age}`);
+console.log(`Привет ${name}. Твой возраст ${age}`);
+if age >= 18 {
+    alert("Вы совершеннолетний")
+}
+else {
+    alert("Вы несовершеннолетний")
+}
+
+
+
+
+
+let randomNumber = Math.floor(Math.random() * 10) + 1;
+let userNumber = prompt("Введите число");
+if (randomNumber === userNumber) {
+    alert("Вы угадали");
+}
+else if (userNumber > 5) {
+    alert("Число больше 5");
+}
+else if (userNumber < 5) {
+    alert("Число меньше 5");
+}
+
+
+
+
+
+let password = prompt("Введите пароль");
+if (password != null && password == "12345") {
+    alert("Доступ разрешен");
+}
+else {
+    alert("Неверный пароль");
+}
+
+
+
+
+let number1 = parseFloat(prompt("Введите первое число:"));
+let number2 = parseFloat(prompt("Введите второе число:"));
+let operator = prompt("Введите оператор (+, -, *, /):");
+
+let result;
+
+if (operator === "+") {
+    result = number1 + number2;
+} else if (operator === "-") {
+    result = number1 - number2;
+} else if (operator === "*") {
+    result = number1 * number2;
+} else if (operator === "/") {
+    if (number2 !== 0) {
+        result = number1 / number2;
+    } else {
+        alert("Деление на ноль невозможно.");
+        result = undefined;
+    }
+} else {
+    alert("Неверный оператор");
+    result = undefined;
+}
+
+if (result !== undefined) {
+    alert(`Результат: ${result}`);
+    console.log(`Результат: ${result}`);
+}

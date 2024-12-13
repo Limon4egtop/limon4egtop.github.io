@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Практика событий</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+<header>
+    <div class="logo">
+        <img id="student-photo" src="unnamed.jpg" alt="Фотография студента" width="150px">
+    </div>
+    <h1>Практика событий</h1>
+</header>
+<main>
+    <section>
+        <h2>Практики первого семестра</h2>
+        <table id="practices-table">
+            <thead>
+            <tr>
+                <th>№</th>
+                <th>Тема</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>1</td>
+                <td>Создание форм в HTML</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Работа с CSS</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Основы JavaScript</td>
+            </tr>
+            </tbody>
+        </table>
+        <button id="second-semester-btn">Посмотреть практики второго семестра</button>
+        <form id="student-form">
+            <label for="name">Имя:</label>
+            <input type="text" id="name" name="name" required>
+            <button type="submit">Отправить</button>
+        </form>
+        <p id="form-message" style="display: none;"></p>
+    </section>
+</main>
+<footer>
+    <p>© 2024, Практика событий</p>
+    <p>Филимонов</p>
+</footer>
+</body>
+</html>
